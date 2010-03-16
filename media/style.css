@@ -1,0 +1,27 @@
+/*text3*/
+font.text3 {font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;}
+
+/*text4*/
+font.text4 {font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;}
+
+/*copyr*/
+A.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}
+A:link.copyr {text-decoration: none; color: #000000;}
+A:visited.copyr {text-decoration: none; color: #000000;}
+A:active.copyr {text-decoration: none; color: #000000;}
+A:hover.copyr {color: #000000}
+
+/*link punkt*/
+A.lin {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+A:link.lin {text-decoration: none; color: #ff7800;}
+A:visited.lin {text-decoration: yes; color: #ff7800;}
+A:active.lin {text-decoration: none; color: #ff7800;}
+A:hover.lin {color: #000000}
+
+/*link punkt_lin_green*/
+A.lin_green {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+A:link.lin_green {text-decoration: none; color: #167c02;}
+A:visited.lin_green {text-decoration: yes; color: #167c02;}
+A:active.lin_green {text-decoration: none; color: #167c02;}
+A:hover.lin_green {color: #000000}
+
