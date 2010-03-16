@@ -80,7 +80,7 @@ MIDDLEWARE_CLASSES = (
     
 )
 
-ROOT_URLCONF = PROJECT_NAME + '.urls'
+ROOT_URLCONF = 'urls.py'
 
 
 TEMPLATE_DIRS = (
@@ -97,103 +97,25 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     #'django.contrib.admindocs',
     #'django.contrib.sites',
-    #'tagging',
     
-    #'cms',
-    #'publisher',
-    
-    #'cms.plugins.text',
-    #'cms.plugins.picture',
-    #'cms.plugins.file',
-    #'cms.plugins.flash',
-    #'cms.plugins.link',
-    #'cms.plugins.snippet',
-    #'cms.plugins.googlemap',
-    #'cms.plugins.teaser',
-    #'cms.plugins.video',
-
-    #'mptt',
-    #'reversion',
     'django_extensions',
     #'debug_toolbar',
     'south',
-    #'tagging',
 	
-    ##'photologue',
-    #'cmsplugin_photologue',
-
-    # sample application
-    #'test_utils',
-    #'store',
     PROJECT_NAME +'.menu',
 )
 
 gettext = lambda s: s
 
-LANGUAGE_CODE = "ru-RU"
+LANGUAGE_CODE = "uk-UA.utf-8"
 
 LANGUAGES = (
-    ('en', gettext('English')),
-    ('ru', gettext('Russian')),
     ('uk', gettext('Ukrainian')),
-    ('hu', gettext('Hungarian')),
 )
 
-CMS_LANGUAGE_FALLBACK = True
-CMS_LANGUAGE_CONF = {
-    'de':['en'],
-    'ru':['uk', 'en'],
-    'uk':['ru', 'en'],
-    'hu':['en'],
-}
-
-APPEND_SLASH = True
-
-CMS_TEMPLATES = (
-    ('2col-left.html',  gettext('with left column')),
-    ('2col-right.html', gettext('with right column')),
-    ('main.htm', gettext('main page')),
-)
-
-CMS_APPLICATIONS_URLS = (
-    ('cmsplugin_photologue.urls', 'Photologue app'),
-)
-
-CMS_PLACEHOLDER_CONF = {                        
-    'body': {
-        "extra_context": {"width":450},
-        "name":gettext("body"),
-    },
-
-    'top': {
-        "extra_context": {"width":810},
-        "name":gettext("top"),
-    },
-    
-    'side-column': {
-        "extra_context": {"width":250},
-        "name":gettext("column")
-    },
-}
 
 
-CMS_NAVIGATION_EXTENDERS = (
-    ('cmsplugin_photologue.menu.get_nodes', gettext('Photologue navigation')),
-)
-
-CMSPLUGIN_PHOTOLOGUE_CSS_CHOICES = (('0', ''),('1', 'small-gallery'),('2', 'left'),('3', 'right'),('4', 'center'),)
-
-CMS_SOFTROOT = True
-CMS_MODERATOR = False
-CMS_PERMISSION = False
-CMS_REDIRECTS = False
-CMS_SEO_FIELDS = True
-CMS_FLAT_URLS = False
-CMS_MENU_TITLE_OVERWRITE = True
-CMS_HIDE_UNTRANSLATED = True
-CMS_URL_OVERWRITE = False
-CMS_TEMPLATE_INHERITANCE = True
-
+APPEND_SLASH = False
 
 try:
     from local_settings import *
