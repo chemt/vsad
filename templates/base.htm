@@ -1,10 +1,9 @@
 <html>
 <head>
-<LINK REL=STYLESHEET TYPE="text/css" HREF="/media/style.css">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="{{ MEDIA_URL }}style.css">
 <META content="sona-studio.org.ua" name=GENERATOR>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Комплекс відпочинку "Вишневий сад"  :: Ресторан :: Піцерія :: Готель :: Сауна ::</title>
-<META name="description" content="Комплекс відпочинку Вишневий сад. Ресторан Піцерія Готель Сауна">
 <META name="keywords" content="Комплекс відпочинку Вишневий сад. Ресторан Піцерія Готель Сауна. Мукачево, Закарпаття, відпочинок, гори">
 
 </head>
@@ -14,32 +13,32 @@
   <table width="1010" height="100%" border="0" cellpadding="0" cellspacing="0">
     <tr> 
       <td width="100%" height="230"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1010" height="230">
-          <param name="movie" value="index.swf">
+          <param name="movie" value="{{ MEDIA_URL }}index.swf">
           <param name="quality" value="high">
-          <embed src="index.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1010" height="230"></embed></object></td>
+          <embed src="{{ MEDIA_URL }}index.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1010" height="230"></embed></object></td>
       <td width="1054" height="140" border="0" cellpadding="0" cellspacing="0"> 
     <tr> 
       <td valign="top" bgcolor="8b1001"><table width="1008" height="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="c04200"  style="BORDER-COLLAPSE: collapse">
           <tr>
             <td><table width="1008" height="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr> 
-                  <td height="2" colspan="3" background="fm.jpg">&nbsp;</td>
+                  <td height="2" colspan="3" background="{{ MEDIA_URL }}fm.jpg">&nbsp;</td>
                 </tr>
                 <tr> 
-                  <td width="80" height="80" valign="top"><img src="1.jpg" width="80" height="80"></td>
+                  <td width="80" height="80" valign="top"><img src="{{ MEDIA_URL }}1.jpg" width="80" height="80"></td>
                   <td height="100%" rowspan="3" valign="top"> 
                   	{% block content %}
                   	{% endblock content %}
                 </td>
-                  <td width="80" height="80" valign="top"><img src="2.jpg" width="80" height="80"></td>
+                  <td width="80" height="80" valign="top"><img src="{{ MEDIA_URL }}2.jpg" width="80" height="80"></td>
                 </tr>
                 <tr> 
                   <td height="100%">&nbsp;</td>
                   <td height="100%">&nbsp;</td>
                 </tr>
                 <tr> 
-                  <td valign="bottom"><img src="4.jpg" width="80" height="80"></td>
-                  <td valign="bottom"><img src="3.jpg" width="80" height="80"></td>
+                  <td valign="bottom"><img src="{{ MEDIA_URL }}4.jpg" width="80" height="80"></td>
+                  <td valign="bottom"><img src="{{ MEDIA_URL }}3.jpg" width="80" height="80"></td>
                 </tr>
               </table></td>
           </tr>
