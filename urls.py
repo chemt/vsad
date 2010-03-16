@@ -6,13 +6,16 @@ admin.autodiscover()
 
 admin.site.root_path = "/admin/" # there is probably a bug in django...
 
-urlpatterns = patterns('',
+urlpatterns = patterns('django.views.generic.simple',
+    (r'^$',             'direct_to_template', {'template': 'index.htm'}),
+    (r'^index.htm$',    'direct_to_template', {'template': 'index.htm'}),
+)
+
+urlpatterns += patterns('',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^jsi18n/(?P<packages>\S+?)/$', 'django.views.i18n.javascript_catalog'),
     
-    # just for testing - native way to sampleapp urls 
-    # (r'^sampleapp-native/', include('sampleapp.urls')),
 )
 
 if settings.DEBUG:
