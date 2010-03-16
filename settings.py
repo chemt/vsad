@@ -80,7 +80,7 @@ MIDDLEWARE_CLASSES = (
     
 )
 
-ROOT_URLCONF = 'urls.py'
+ROOT_URLCONF = 'urls'
 
 
 TEMPLATE_DIRS = (
@@ -92,7 +92,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.auth',
-    #'django.contrib.contenttypes',
+    'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.admin',
     #'django.contrib.admindocs',
