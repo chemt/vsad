@@ -9,6 +9,12 @@ admin.site.root_path = "/admin/" # there is probably a bug in django...
 urlpatterns = patterns('django.views.generic.simple',
     (r'^$',             'direct_to_template', {'template': 'index.htm'}),
     (r'^index.htm$',    'direct_to_template', {'template': 'index.htm'}),
+    (r'^book.htm$',     'direct_to_template', {'template': 'book.htm'}),
+    (r'^contact.htm$',  'direct_to_template', {'template': 'contact.htm'}),
+    (r'^hotel.htm$',    'direct_to_template', {'template': 'hotel.htm'}),
+    (r'^pitseriya.htm$','direct_to_template', {'template': 'pitseriya.htm'}),
+    (r'^restaurant.htm$', 'direct_to_template', {'template': 'restaurant.htm'}),
+    (r'^sauna.htm$',    'direct_to_template', {'template': 'sauna.htm'}),
 )
 
 urlpatterns += patterns('',
