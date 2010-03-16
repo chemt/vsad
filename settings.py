@@ -115,7 +115,7 @@ LANGUAGES = (
 
 
 
-APPEND_SLASH = False
+#APPEND_SLASH = False
 
 try:
     from local_settings import *
