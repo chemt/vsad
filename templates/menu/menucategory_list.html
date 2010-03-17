@@ -14,8 +14,8 @@
 			</tr>
 		{% for item in cat.menuitem_set.all %}
 			<tr class="{% cycle 'lite' 'darck' %}"> 
-				<td class='img'> {% if item.img.thumbnail %}
-					<img src="{{ item.img.thumbnail }}" alt="{{ my_model.name }}  {{ item.amount }}" />
+				<td class='img'> {% if item.image.thumbnail %}
+					<img src="{{ item.image.thumbnail }}" alt="{{ item.name }}  {{ item.amount }}" />
 					{% endif %}
 				</td> 
 				<td class='name'> {{ item.name }}	</td> 
