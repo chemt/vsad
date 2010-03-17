@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy  as _
+from sorl.thumbnail.fields import ImageWithThumbnailsField 
 
 class MenuCategory(models.Model):
     name = models.CharField(_(u"Назва Розділу"),max_length=200)
@@ -30,6 +31,8 @@ class MenuItem(models.Model):
     category = models.ForeignKey(MenuCategory, verbose_name=_(u"Розділ"))
     amount   = models.CharField(_(u"Порція"), max_length=200, blank=True, null = True)
     price    = models.CharField(_(u"Ціна"), max_length=200, blank=True, null = True)
+    image    = ImageWithThumbnailsField(_(u"Фото"),  blank=True, upload_to='profiles',
+                                     thumbnail={'size': (80, 80)})
 
     def __unicode__(self):
         return self.name
@@ -42,7 +45,7 @@ class MenuItem(models.Model):
     class Admin(admin.ModelAdmin):
         fieldsets = (
             (None,		{'fields': ('name', 'category')}),
-            (_(u"Страва"),		{'fields': ('amount', 'price')}),
+            (_(u"Страва"),		{'fields': ('amount', 'price', 'image')}),
             (_(u"Сортування"),		{'fields': ('ordering',)}),
             )
         list_display = ('name', 'category', 'amount', 'price')

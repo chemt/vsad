@@ -20,7 +20,7 @@ class ItemInline(admin.TabularInline):
 #class ItemInline(admin.StackedInline):
     model = MenuItem
     fieldsets = (
-            (None,		{'fields': ('name', 'category','amount', 'price', 'ordering')}),
+            (None,		{'fields': ('name', 'image', 'category','amount', 'price', 'ordering')}),
             )
     ordering = ["ordering", "name", "amount", "price"]
 

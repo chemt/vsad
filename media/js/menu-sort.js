@@ -20,10 +20,10 @@ jQuery(function($) {
 
     jQuery(function($) {
         $('div.inline-group').sortable({
-            items: '.inline-related tr',
+            items: '.inline-related tbody tr',
             handle: 'td',
             update: function() {
-                $(this).find('.inline-related tr').each(function(i) {
+                $(this).find('.inline-related tbody tr').each(function(i) {
                 	if($(this).find('input[name$=name]').val()){
                     	$(this).find('input[name$=ordering]').val(i+1);
                 	}
