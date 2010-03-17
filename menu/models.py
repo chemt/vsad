@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib import admin
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy  as _
 
 class MenuCategory(models.Model):
     name = models.CharField(_(u"Назва Розділу"),max_length=200)
@@ -21,7 +21,7 @@ class MenuCategory(models.Model):
         search_fields  = ('name',)
 
     def __unicode__(self):
-        return self.name
+        return u"%s" % self.name
 
 
 class MenuItem(models.Model):

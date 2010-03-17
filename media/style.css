@@ -1,8 +1,25 @@
+body{font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;	}
+h1{text-align: center;}
+
+#main{
+	margin: 0 auto;
+	width: 800px;
+}
+
+.menu-table { width: 780px; }
+  .menu-table th { text-align: left;}
+  .menu-table .img {width: 80px;}
+  .menu-table .name {width: 447px;}
+  .menu-table .amount {width: 125px; text-align: center;}
+  .menu-table .price {width: 128px; text-align: center;}
+  .menu-table tr.lite {background-color:#8B1001;}
+  .menu-table tr.darck {background-color:#801001;}
+
 /*text3*/
-font.text3 {font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;}
+font.text3 {font-size: 18px;}
 
 /*text4*/
-font.text4 {font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;}
+font.text4 {font-size: 18px;}
 
 /*copyr*/
 A.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}
@@ -12,16 +29,17 @@ A:active.copyr {text-decoration: none; color: #000000;}
 A:hover.copyr {color: #000000}
 
 /*link punkt*/
-A.lin {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
+A.lin {}
 A:link.lin {text-decoration: none; color: #ff7800;}
-A:visited.lin {text-decoration: yes; color: #ff7800;}
-A:active.lin {text-decoration: none; color: #ff7800;}
-A:hover.lin {color: #000000}
+A:visited.lin {text-decoration: yes; color: #ff7000;}
+A:active.lin {text-decoration: none; color: #f07800;}
+A:hover.lin {color: #ff8800}
 
 /*link punkt_lin_green*/
+/*
 A.lin_green {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
-A:link.lin_green {text-decoration: none; color: #167c02;}
-A:visited.lin_green {text-decoration: yes; color: #167c02;}
-A:active.lin_green {text-decoration: none; color: #167c02;}
-A:hover.lin_green {color: #000000}
-
+A:link {text-decoration: none; color: #167c02;}
+A:visited {text-decoration: yes; color: #167c02;}
+A:active {text-decoration: none; color: #167c02;}
+A:hover {color: #000000}
+*/

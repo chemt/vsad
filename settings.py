@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'django_extensions',
     #'debug_toolbar',
     'south',
+    'sorl.thumbnail',
 	
     PROJECT_NAME +'.menu',
 )

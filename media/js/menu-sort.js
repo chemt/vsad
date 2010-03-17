@@ -20,11 +20,13 @@ jQuery(function($) {
 
     jQuery(function($) {
         $('div.inline-group').sortable({
-            items: 'tr.has_original',
+            items: '.inline-related tr',
             handle: 'td',
             update: function() {
-                $(this).find('tr.has_original').each(function(i) {
-                    $(this).find('input[name$=ordering]').val(i+1);
+                $(this).find('.inline-related tr').each(function(i) {
+                	if($(this).find('input[name$=name]').val()){
+                    	$(this).find('input[name$=ordering]').val(i+1);
+                	}
                     $(this).removeClass('row1').removeClass('row2');
                     $(this).addClass('row'+((i%2)+1));
                 });
