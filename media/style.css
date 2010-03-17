@@ -8,7 +8,7 @@ h1{text-align: center;}
 
 .menu-table { width: 780px; }
   .menu-table th {text-align: left;}
-  .menu-table tr {vertical-align: center; padding: 3px 0;}
+  .menu-table tr {vertical-align: center;}
   .menu-table .img {width: 84px; padding-right: 5px;}
   .menu-table .img img {border: 2px solid #f0b012;}
   .menu-table .name {width: 447px;}
