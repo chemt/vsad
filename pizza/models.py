@@ -26,7 +26,7 @@ class Pizza(models.Model):
         
     class Admin(admin.ModelAdmin):
         fieldsets = (
-            (None,		{'fields': ('name', 'image')}),
+            (None,		{'fields': ('name', 'sklad', 'image')}),
             (_(u"Велика"),		{'fields': ('big_amaunt','big_price',)}),
             (_(u"Мала"),		{'fields': ('small_amaunt','small_price',)}),
             (_(u"Сортування"),		{'fields': ('ordering',)}),
