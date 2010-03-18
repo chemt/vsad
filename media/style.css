@@ -9,11 +9,10 @@ h1{text-align: center;}
 .menu-table { width: 780px; }
   .menu-table th {text-align: left;}
   .menu-table tr {vertical-align: center;}
-  .menu-table .img {width: 84px; padding-right: 5px;}
+  .menu-table .img {width: 84px; padding: 4px;}
   .menu-table .img img {border: 2px solid #f0b012;}
   .menu-table .name {width: 447px;}
-  .menu-table .amount {width: 125px; text-align: center;}
-  .menu-table .price {width: 128px; text-align: center;}
+  .menu-table .col {width: 8em; text-align: center;}
   .menu-table tr.lite {background-color:#8B1001;}
   .menu-table tr.darck {background-color:#801001;}
 

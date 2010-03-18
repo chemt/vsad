@@ -104,6 +104,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
 	
     PROJECT_NAME +'.menu',
+    PROJECT_NAME +'.pizza',
 )
 
 gettext = lambda s: s

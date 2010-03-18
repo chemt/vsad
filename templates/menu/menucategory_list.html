@@ -9,8 +9,10 @@
 			<tr id="table_header"> 
 				<th class='img'> 		</th> 
 				<th class='name'> Назва	</th> 
-				<th class='amount'>  	</th>
-				<th class='price'> Ціна </th>
+				<th class='col'> {{ cat.col1 }} </th>
+				<th class='col'> {{ cat.col2 }} </th>
+				<th class='col'> {{ cat.col3 }} </th>
+				<th class='col'> {{ cat.col4 }} </th>
 			</tr>
 		{% for item in cat.menuitem_set.all %}
 			<tr class="{% cycle 'lite' 'darck' %}"> 
@@ -19,8 +21,10 @@
 					{% endif %}
 				</td> 
 				<td class='name'> {{ item.name }}	</td> 
-				<td class='amount'> {{ item.amount }} </td>
-				<td class='price'> {{ item.price }} </td>
+				<td class='col'> {{ item.col1 }} </td>
+				<td class='col'> {{ item.col2 }} </td>
+				<td class='col'> {{ item.col3 }} </td>
+				<td class='col'> {{ item.col4 }} </td>
 			</tr>
 		{% endfor %}
 		</table>

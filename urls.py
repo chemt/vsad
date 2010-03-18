@@ -18,6 +18,7 @@ urlpatterns = patterns('django.views.generic.simple',
     (r'^sauna.htm$',    'direct_to_template', {'template': 'sauna.htm'}),
     
     (r'^menu.htm', include('vsad.menu.urls')),
+    (r'^pizza.htm', include('vsad.pizza.urls')),
 )
 
 urlpatterns += patterns('',

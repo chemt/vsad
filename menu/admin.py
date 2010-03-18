@@ -20,9 +20,12 @@ class ItemInline(admin.TabularInline):
 #class ItemInline(admin.StackedInline):
     model = MenuItem
     fieldsets = (
-            (None,		{'fields': ('name', 'image', 'category','amount', 'price', 'ordering')}),
+            (None,		{'fields': ('name', 'image', 'ordering', 'category',
+            						'col1','col2','col3','col4',)}),
             )
-    ordering = ["ordering", "name", "amount", "price"]
+    ordering = ["ordering", 'image', "name", ]
+
+admin.site.register(MenuItem, MenuItem.Admin)
 
 admin.site.register(MenuCategory,
     inlines = [ItemInline],
@@ -30,5 +33,3 @@ admin.site.register(MenuCategory,
 )
 
 #admin.site.register(MenuCategory, MenuCategory.Admin)
-admin.site.register(MenuItem, MenuItem.Admin)
-

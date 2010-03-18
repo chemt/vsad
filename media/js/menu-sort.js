@@ -34,3 +34,7 @@ jQuery(function($) {
         });
         $('tr.has_original').css('cursor', 'move');
     });
+    
+    jQuery(function($) {
+        $('td[class^=col] > input.vTextField').width('10em');
+    });    

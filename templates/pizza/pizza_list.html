@@ -1,0 +1,38 @@
+{% extends "page.htm" %}
+{% block title %} Меню Піцерії {% endblock title %}
+
+{% block body %}
+	<div id="main">
+		<h1>Піцца</h1>
+		<table class='menu-table' 	cellpadding="0"	cellspacing="0">
+		{% for pizza in pizza_list %}
+			<tr class="{% cycle 'lite' 'darck' %}"> 
+				<td class='img'> {% if pizza.image.thumbnail %}
+					<img src="{{ pizza.image.thumbnail }}" alt="{{ pizza.name }}" />
+					{% endif %}
+				</td> 
+				<td class='name'> {{ pizza.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 
+				<td class='col'> {{ pizza.big_amaunt }} <br> {{ pizza.small_amaunt }} </td>
+				<td class='col'> {{ pizza.big_price }} <br> {{ pizza.small_price }} </td>
+			</tr>
+		{% endfor %}
+		</table>
+
+		<h1>Додатки до піци</h1>
+		<table class='menu-table' 	cellpadding="0"	cellspacing="0">
+		{% for pizzaadd in pizzaadd_list %}
+			<tr class="{% cycle 'lite' 'darck' %}"> 
+				<td class='img'> {% if pizzaadd.image.thumbnail %}
+					<img src="{{ pizzaadd.image.thumbnail }}" alt="{{ pizzaadd.name }}" />
+					{% endif %}
+				</td> 
+				<td class='name'> {{ pizzaadd.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 
+				<td class='col'> {{ pizzaadd.amaunt }} </td>
+				<td class='col'> {{ pizzaadd.price }} </td>
+			</tr>
+		{% endfor %}
+		</table>
+
+
+	</div>
+{% endblock body %}
