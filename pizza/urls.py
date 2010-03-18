@@ -9,7 +9,7 @@ Pizza_list_info = {
 	'template_object_name': 'Pizza',
 
 	'extra_context': {
-		'pizzaadd_list': PizzaAdd.objects.all(),
+		'PizzaAdd_list': PizzaAdd.objects.all(),
 	},
 }
 
