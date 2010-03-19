@@ -1,5 +1,10 @@
 body{font-family: Times New Roman, sans-serif; font-size: 18px; color: #f0b012;	}
 h1{text-align: center;}
+form{
+	margin: 0 auto;
+	width: 220px;
+}
+
 
 #main{
 	margin: 0 auto;
@@ -29,18 +34,9 @@ A:visited.copyr {text-decoration: none; color: #000000;}
 A:active.copyr {text-decoration: none; color: #000000;}
 A:hover.copyr {color: #000000}
 
-/*link punkt*/
-A.lin {}
-A:link.lin {text-decoration: none; color: #ff7800;}
-A:visited.lin {text-decoration: yes; color: #ff7000;}
-A:active.lin {text-decoration: none; color: #f07800;}
-A:hover.lin {color: #ff8800}
+A {}
+A:link {text-decoration: none; color: #ff7800;}
+A:visited {text-decoration: yes; color: #ff7000;}
+A:active {text-decoration: none; color: #f07800;}
+A:hover {color: #ff8800}
 
-/*link punkt_lin_green*/
-/*
-A.lin_green {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px;}
-A:link {text-decoration: none; color: #167c02;}
-A:visited {text-decoration: yes; color: #167c02;}
-A:active {text-decoration: none; color: #167c02;}
-A:hover {color: #000000}
-*/

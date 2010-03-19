@@ -1,6 +1,7 @@
+from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from django.conf import settings
+from django.contrib.auth.views import login, logout
 
 admin.autodiscover()
 
@@ -19,14 +20,20 @@ urlpatterns = patterns('django.views.generic.simple',
     
     (r'^menu.htm', include('vsad.menu.urls')),
     (r'^pizza.htm', include('vsad.pizza.urls')),
+
+    (r'^vip_', include('vip.urls')),
+    (r'^vip_', include('registration.urls')),
 )
 
 urlpatterns += patterns('',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^jsi18n/(?P<packages>\S+?)/$', 'django.views.i18n.javascript_catalog'),
-    
+    (r'^accounts/login/$',  login),
+    (r'^accounts/logout/$', logout),
+
 )
+
 
 if settings.DEBUG:
     urlpatterns+= patterns('',

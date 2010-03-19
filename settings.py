@@ -1,4 +1,4 @@
-# Django settings for cms project.
+# -*- coding: utf-8 -*-
 import os
 PROJECT_DIR = os.path.dirname(__file__)
 PROJECT_NAME = 'vsad'
@@ -45,7 +45,7 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '*xq7m@)*sdf213f2awoj!spa0(jibsrz9%c0d=e(g)v*!17y(vx0ue_3'
+SECRET_KEY = '*xq7m@)*sdf213f2awo3#33s5;j!spa0(jibsrz9%c0d=e(g)v*!17y(vx0ue_3'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -82,7 +82,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'urls'
 
-
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -90,21 +89,40 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
+
+#AUTH_PROFILE_MODULE = "vip.VipProfile"
+
+# добавляем приложение в setting.py
+ACCOUNT_ACTIVATION_DAYS = 2 # кол-во дней для хранения кода активации
+
+# для отправки кода активации
+AUTH_USER_EMAIL_UNIQUE = True
+#EMAIL_HOST = 'localhost'
+#EMAIL_PORT = 1025
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_USE_TLS = False
+#EFAULT_FROM_EMAIL = 'admin@vishneviy-sad.org.ua'
+
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.admin',
     #'django.contrib.admindocs',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     
     'django_extensions',
     #'debug_toolbar',
     'south',
     'sorl.thumbnail',
+    'registration', # это наш reusable app
+    
 	
     PROJECT_NAME +'.menu',
     PROJECT_NAME +'.pizza',
+    PROJECT_NAME +'.vip',
 )
 
 gettext = lambda s: s
@@ -117,7 +135,7 @@ LANGUAGES = (
 
 
 
-#APPEND_SLASH = False
+APPEND_SLASH = False
 
 try:
     from local_settings import *
