@@ -62,6 +62,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
 )
 
+AUTHENTICATION_BACKENDS = (
+    'vip.auth_backends.CustomUserModelBackend',
+)
+
+
+CUSTOM_USER_MODEL = 'vip.VipUser'
+
 INTERNAL_IPS = ('127.0.0.1',)
 
 MIDDLEWARE_CLASSES = (
