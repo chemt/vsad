@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Django settings for cms project.
 import os
 PROJECT_DIR = os.path.dirname(__file__)
@@ -6,13 +7,15 @@ PROJECT_NAME = 'vsad'
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
-)
+ADMINS = ("pokutnik@gmail.com",)
+REPORT_EMAILS = ("pokutnik@gmail.com",)
+EMAIL_HOST = "localhost"
+EMAIL_PORT = 1025
+MANAGERS = ADMINS
+
 
 CACHE_BACKEND = 'locmem:///'
 
-MANAGERS = ADMINS
 
 
 
@@ -105,7 +108,9 @@ INSTALLED_APPS = (
 	
     PROJECT_NAME +'.menu',
     PROJECT_NAME +'.pizza',
+    PROJECT_NAME +'.guestbook',
 )
+
 
 gettext = lambda s: s
 
