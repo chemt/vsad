@@ -35,12 +35,12 @@
                             	{% for entry in entries %}
                             <table width="651" border="0" cellspacing="0" cellpadding="0">
                               <tr> 
-                                <td width="343"><div align="left"><font class="text3"><strong>{{ entry.name }}</strong></font></div></td>
+                                <td width="343"><div align="left"><font class="text3"><strong>{{ entry.name|striptags }}</strong></font></div></td>
                                 <td width="308"><div align="right"><font class="text3">{{ entry.date }}</font></div></td>
                               </tr>
                               <tr> 
                                 <td colspan="2"><br><font class="text3">
-                                  {{ entry.text }}
+                                  {{ entry.text|striptags }}
                                   </font> </td>
                               </tr>
                             </table>

@@ -1,0 +1,33 @@
+{% extends "base.htm" %}
+{% block content %}
+                    <table width="750" height="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr> 
+                        <td height="30" align="center"> 
+                          <div align="right"><font class="text3"></font></div>
+                          <font class="text3"><strong>Замовлення для VIP кліентів</strong></font></td>
+                      </tr>
+                      <tr align="right"> 
+                        <td> <div align="center"> 
+                            <br>
+                            <br>
+
+								<form action="/zayavka.htm" method="post">
+								<table>
+								{{ form.as_table }}
+								<tr>
+									<td></td>
+									<td>
+								<input type="submit" value="Відправити заявку" />
+								<input type="reset" value="Очистити" />
+									</td>
+								</tr>
+								</table>
+								</form>
+	                            <br>
+	                            <br>
+
+                            <br>
+                          </div></td>
+                      </tr>
+                    </table>
+{% endblock content %}

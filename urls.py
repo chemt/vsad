@@ -15,12 +15,14 @@ urlpatterns = patterns('django.views.generic.simple',
     (r'^pitseriya.htm$','direct_to_template', {'template': 'pitseriya.htm'}),
     (r'^restaurant.htm$', 'direct_to_template', {'template': 'restaurant.htm'}),
     (r'^sauna.htm$',    'direct_to_template', {'template': 'sauna.htm'}),
-    (r'^books.htm$',     'direct_to_template', {'template': 'book.htm'}),
+    (r'^books.htm$',    'direct_to_template', {'template': 'book.htm'}),
 
-    (r'^book.htm$', include('vsad.guestbook.urls')),
+    (r'^menu.htm', 		include('vsad.menu.urls')),
+    (r'^pizza.htm', 	include('vsad.pizza.urls')),
+
+    (r'^book.htm$', 	include('vsad.guestbook.urls')),
+    (r'^zayavka.htm$', 	include('vsad.zayavka.urls')),
     
-    (r'^menu.htm', include('vsad.menu.urls')),
-    (r'^pizza.htm', include('vsad.pizza.urls')),
 )
 
 urlpatterns += patterns('',

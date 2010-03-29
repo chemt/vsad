@@ -1,0 +1,15 @@
+Нове замовлення.
+
+Номер VIP картки : {{ data.vip_card|escape }}
+Ім’я             : {{ data.name|escape }}
+Контактний номер : {{ data.contact|escape }}
+На коли          : {{ data.date|escape }}
+
+Замовлено:
+{% if restoran %} Страву {% endif %}
+{% if pizza %} Піццу {% endif %}
+{% if hotel %} Номер в готелі{% endif %}
+{% if sauna %} Сауну {% endif %}
+
+Текст замовлення:
+{{ text|escape }}

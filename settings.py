@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     PROJECT_NAME +'.menu',
     PROJECT_NAME +'.pizza',
     PROJECT_NAME +'.guestbook',
+    PROJECT_NAME +'.zayavka',
 )
 
 
@@ -128,4 +129,5 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
 

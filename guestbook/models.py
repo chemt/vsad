@@ -2,7 +2,6 @@
 from django.db import models
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy  as _
-from sorl.thumbnail.fields import ImageWithThumbnailsField 
 
 class GuestBook(models.Model):
     name = models.CharField(_(u"Ім’я"),max_length=200)

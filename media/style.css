@@ -29,8 +29,13 @@ A:visited.copyr {text-decoration: none; color: #000000;}
 A:active.copyr {text-decoration: none; color: #000000;}
 A:hover.copyr {color: #000000}
 
-/*link punkt*/
 A{text-decoration: underline; color: #ff7800;}
 A:visited{text-decoration: underline; color: #ff7000;}
 A:active{text-decoration: none; color: #f07800;}
 A:hover{color: #ff8800}
+
+ul.errorlist{margin: 0; padding: 0;}
+ul.errorlist li{margin: 0; padding: 0; list-style: none;}
+form table th,
+form table td {border-bottom: 1px dotted #ff7000;}
+input[type=text] { width: 100%; } 
