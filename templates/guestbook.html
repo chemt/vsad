@@ -1,0 +1,54 @@
+{% extends "base.htm" %}
+{% block content %}
+                    <table width="750" height="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr> 
+                        <td height="30" align="center"> 
+                          <div align="right"><font class="text3"></font></div>
+                          <font class="text3"><strong>Гостьова книга </strong></font></td>
+                      </tr>
+                      <tr align="right"> 
+                        <td> <div align="center"> 
+                            <br>
+                            <br>
+
+                            {% if added %}
+		                        <h1>Дякуемо, за ваш відгук.</h1>
+                            {% endif %}
+
+                            {% if not added %}
+								<form action="/guestbook.htm" method="post">
+								<table>
+								{{ form.as_table }}
+								<tr>
+									<td></td>
+									<td>
+								<input type="submit" value="Додати відгук" />
+								<input type="reset" value="Очистити" />
+									</td>
+								</tr>
+								</table>
+								</form>
+                            {% endif %}
+	                            <br>
+	                            <br>
+
+                            	{% for entry in entries %}
+                            <table width="651" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="343"><div align="left"><font class="text3"><strong>{{ entry.name|striptags }}</strong></font></div></td>
+                                <td width="308"><div align="right"><font class="text3">{{ entry.date }}</font></div></td>
+                              </tr>
+                              <tr> 
+                                <td colspan="2"><br><font class="text3">
+                                  {{ entry.text|striptags }}
+                                  </font> </td>
+                              </tr>
+                            </table>
+                            <br>
+                            <br>
+                                {% endfor %}
+                            <br>
+                          </div></td>
+                      </tr>
+                    </table>
+{% endblock content %}
