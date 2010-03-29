@@ -17,7 +17,7 @@ def zayavka(request):
             data = form.cleaned_data
             
             message_text = render_to_string('mail_zamovlenya.txt', { 'data': data })
-            send_mail(u'Новий відгук на сайті', message_text, 'auto@example.com',
+            send_mail(u'Нова заявка на сайті', message_text, 'auto@example.com',
                         REPORT_EMAILS, fail_silently=False)
             added = True
             form=ZayavkaForm()

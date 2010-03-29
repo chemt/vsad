@@ -10,7 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = ("pokutnik@gmail.com",)
 REPORT_EMAILS = ("pokutnik@gmail.com",)
 EMAIL_HOST = "localhost"
-EMAIL_PORT = 1025
+#EMAIL_PORT = 1025
 MANAGERS = ADMINS
 
 
