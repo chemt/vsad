@@ -24,6 +24,7 @@ class ItemInline(admin.TabularInline):
             						'col1','col2','col3','col4',)}),
             )
     ordering = ["ordering", 'image', "name", ]
+    extra = 15
 
 admin.site.register(MenuItem, MenuItem.Admin)
 

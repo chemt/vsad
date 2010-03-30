@@ -19,8 +19,6 @@ def zayavka(request):
             message_text = render_to_string('mail_zamovlenya.txt', { 'data': data })
             send_mail(u'Нова заявка на сайті', message_text, 'auto@example.com',
                         REPORT_EMAILS, fail_silently=False)
-            added = True
-            form=ZayavkaForm()
             return render_to_response("zayavka_ok.htm", RequestContext(request))
 
     else:
