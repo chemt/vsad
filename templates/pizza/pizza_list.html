@@ -8,7 +8,9 @@
 		{% for pizza in Pizza_list %}
 			<tr class="{% cycle 'lite' 'darck' %}"> 
 				<td class='img'> {% if pizza.image.thumbnail %}
-					<img src="{{ pizza.image.thumbnail }}" alt="{{ pizza.name }}" />
+					<a href="{{ MEDIA_URL }}{{ item.image }}" class="zoom" >
+						<img src="{{ pizza.image.thumbnail }}" alt="{{ pizza.name }}" />
+					</a>
 					{% endif %}
 				</td> 
 				<td class='name'> {{ pizza.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 
@@ -23,7 +25,9 @@
 		{% for pizzaadd in PizzaAdd_list %}
 			<tr class="{% cycle 'lite' 'darck' %}"> 
 				<td class='img'> {% if pizzaadd.image.thumbnail %}
+					<a href="{{ MEDIA_URL }}{{ pizzaadd.image }}" class="zoom">
 					<img src="{{ pizzaadd.image.thumbnail }}" alt="{{ pizzaadd.name }}" />
+					</a>
 					{% endif %}
 				</td> 
 				<td class='name'> {{ pizzaadd.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 

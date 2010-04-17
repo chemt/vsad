@@ -17,7 +17,9 @@
 		{% for item in cat.menuitem_set.all %}
 			<tr class="{% cycle 'lite' 'darck' %}"> 
 				<td class='img'> {% if item.image.thumbnail %}
-					<img src="{{ item.image.thumbnail }}" alt="{{ item.name }}  {{ item.amount }}" />
+					<a href="{{ MEDIA_URL }}{{ item.image }}" class="zoom" >
+						<img src="{{ item.image.thumbnail }}" alt="{{ item.name }}" />
+					</a>
 					{% endif %}
 				</td> 
 				<td class='name'> {{ item.name }}	</td> 
