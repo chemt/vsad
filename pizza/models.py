@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy  as _
 from sorl.thumbnail.fields import ImageWithThumbnailsField 
 
 class Pizza(models.Model):
-    name = models.CharField(_(u"Назва піци"),max_length=200)
+    name = models.CharField(_(u"Назва піци"), max_length=200)
     ordering = models.IntegerField(_(u"Порядок сортування"), blank=True, null=True)
     
     sklad = models.CharField(_(u"Склад"), max_length=200, blank=True)
@@ -15,7 +15,7 @@ class Pizza(models.Model):
     small_amaunt = models.CharField(_(u"Маса (мала)"), max_length=200,blank=True)
     small_price = models.CharField(_(u"Ціна (мала)"), max_length=200,blank=True)
 
-    image    = ImageWithThumbnailsField(_(u"Фото"),  blank=True, upload_to='profiles',
+    image = ImageWithThumbnailsField(_(u"Фото"),  blank=True, upload_to='profiles',
                                      thumbnail={'size': (80, 80)})
 
 

@@ -73,6 +73,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'pages.middleware.PageFallbackMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -96,14 +97,6 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
 
-
-#AUTH_PROFILE_MODULE = "vip.VipProfile"
-
-# добавляем приложение в setting.py
-ACCOUNT_ACTIVATION_DAYS = 2 # кол-во дней для хранения кода активации
-
-# для отправки кода активации
-AUTH_USER_EMAIL_UNIQUE = True
 #EMAIL_HOST = 'localhost'
 #EMAIL_PORT = 1025
 #EMAIL_HOST_USER = ''
@@ -124,12 +117,13 @@ INSTALLED_APPS = (
     #'debug_toolbar',
     'south',
     'sorl.thumbnail',
-
+    'markitup',
 	
     PROJECT_NAME +'.menu',
     PROJECT_NAME +'.pizza',
     PROJECT_NAME +'.guestbook',
     PROJECT_NAME +'.zayavka',
+    PROJECT_NAME +'.pages',
 )
 
 
@@ -141,9 +135,13 @@ LANGUAGES = (
     ('uk', gettext('Ukrainian')),
 )
 
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': True})
+MARKITUP_PREVIEW_FILTER = ('markdown.markdown', {'safe_mode': True})
+MARKITUP_SET = 'markitup/sets/markdown'
+MARKITUP_SKIN = 'markitup/skins/markitup'
 
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 try:
     from local_settings import *

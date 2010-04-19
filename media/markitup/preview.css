@@ -1,0 +1,13 @@
+/* preview style examples */
+body{ font-family: Times New Roman, sans-serif; color: #f0b012; text-align:center; background:#810000; width: 848px;}
+p{font-family: Times New Roman, sans-serif; font-size: 18px; }
+a{text-decoration: underline; color: #ff7800;}
+a:visited{text-decoration: underline; color: #ff7000;}
+a:active{text-decoration: none; color: #f07800;}
+a:hover{color: #ff8800}
+
+h1.title,
+.text4,
+.text3{font-size: 18px;}
+
+ 
