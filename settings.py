@@ -4,7 +4,7 @@ import os
 PROJECT_DIR = os.path.dirname(__file__)
 PROJECT_NAME = 'vsad'
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = ("pokutnik@gmail.com",)

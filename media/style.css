@@ -3,8 +3,8 @@ body{ font-family: Times New Roman, sans-serif; color: #f0b012; text-align:cente
 p{font-family: Times New Roman, sans-serif; font-size: 18px; }
 
 
-a{text-decoration: underline; color: #ff7800;}
-a:visited{text-decoration: underline; color: #ff7000;}
+a{text-decoration: underline; color: #f0b012 /*#ff7800;*/}
+a:visited{text-decoration: underline; /* color: #ff7000;*/}
 a:active{text-decoration: none; color: #f07800;}
 a:hover{color: #ff8800}
 
@@ -21,12 +21,13 @@ h1.title,
 .menu-table { width: 780px; }
   .menu-table th {text-align: left;}
   .menu-table tr {vertical-align: center;}
-  .menu-table .img {width: 84px; padding: 4px;}
+  .menu-table .img {padding: 4px;}
   .menu-table .img img {border: 2px solid #f0b012;}
   .menu-table .name {width: 447px;}
   .menu-table .col {width: 8em; text-align: center;}
   .menu-table tr.lite {background-color:#8B1001;}
   .menu-table tr.darck {background-color:#801001;}
+
 
 
 /*copyr*/
