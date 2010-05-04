@@ -18,17 +18,17 @@ h1.title,
 	width: 800px;
 }
 
-.menu-table { width: 780px; }
-  .menu-table th {text-align: left;}
-  .menu-table tr {vertical-align: center;}
-  .menu-table .img {padding: 4px;}
-  .menu-table .img img {border: 2px solid #f0b012;}
-  .menu-table .name {width: 447px;}
-  .menu-table .col {width: 8em; text-align: center;}
-  .menu-table tr.lite {background-color:#8B1001;}
-  .menu-table tr.darck {background-color:#801001;}
+.table { width: 780px; }
+  .table th {text-align: left;}
+  .table tr {vertical-align: center;}
+  .table .img {padding: 4px;}
+  .table .img img {border: 2px solid #f0b012;}
+  .table .name {width: 447px;}
+  .table .col {width: 8em; text-align: center;}
+  .table tr.lite {background-color:#8B1001;}
+  .table tr.darck {background-color:#801001;}
 
-
+.nomer-table td.img {width: 420px;}
 
 /*copyr*/
 a.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}

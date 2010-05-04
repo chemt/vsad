@@ -1,0 +1,59 @@
+{% extends "page.htm" %}
+{% load thumbnail %}
+
+{% block title %} Номери {% endblock title %}
+
+{% block extraheader %}
+{{ block.super }}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+<link rel="stylesheet" href="{{ MEDIA_URL }}fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.menu_cat div.table').hide();
+
+	$('.menu_cat h1').click(function(e){
+		$(this).next('div.table').slideToggle("slow");
+	});
+
+	$("a.zoom").fancybox({
+		'hideOnContentClick': true
+	});
+	
+});
+{% endblock extraheader %}
+
+
+{% block body %}
+	<div id="main">
+	<p>Номерний фонд складає 10 номерів, з них 4 люкси та 6 напівлюкси.</p>
+	<p> У кожному номері до Ваших послуг кондиціонер, кабельне телебачення, <br>
+	гаряча та холодна вода, щоденне прибирання, а також обслуговування офіціантами.</p>
+	<br>
+	<br>
+	
+	{% for nomer in Nomer_list %}
+
+	<div class="menu_cat">
+		<h1><a href="#"> {{ nomer.name }} </a></h1>
+		<div class="table">
+			<table class='nomer-table' 	cellpadding="0"	cellspacing="0">
+				<tr> 
+					<td class='img'>
+					{% for photo in nomer.nomerphoto_set.all %}
+					    {% if photo.photo.thumbnail %}
+						<a href="{{ MEDIA_URL}}{{ photo.photo }}" class="zoom" >
+							<img src="{{ photo.photo.thumbnail }}" alt="{{ photo.name }}" />
+						</a>
+						{% endif %}
+					{% endfor %}					
+					</td> 
+					<td class='text'> {{ nomer.text }} </th> 
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	{% endfor %}
+	</div>
+{% endblock body %}

@@ -20,7 +20,8 @@ urlpatterns = patterns('django.views.generic.simple',
 
     url(r'^menu.htm', 	include('vsad.menu.urls')),
     url(r'^pizza.htm', 	include('vsad.pizza.urls')),
-
+    url(r'^nomeri.htm',     include('vsad.hotel.urls')),
+    
     url(r'^book.htm$', 	include('vsad.guestbook.urls')),
     url(r'^zayavka.htm$', 	include('vsad.zayavka.urls')),
 #    url(r'^', include('pages.urls'))

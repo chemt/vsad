@@ -11,5 +11,4 @@ MenuCategory_list_info = {
 
 urlpatterns = patterns('',
     (r'^$', list_detail.object_list, MenuCategory_list_info),
-    #(r'^(?P<object_id>\d+)/$', list_detail.object_detail, Entry_list_info),
 )

@@ -44,8 +44,8 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 #ADMIN_MEDIA_ROOT = os.path.join(PROJECT_DIR, '../admin_media/')
 MEDIA_URL = '/media/'
 
-ADMIN_MEDIA_PREFIX = '/media/admin/'
-
+# ADMIN_MEDIA_PREFIX = '/media/admin/'
+ADMIN_MEDIA_PREFIX = 'http://staticfling.net/_django/admin_media_102/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '*xq7m@)*sdf213f2awo3#33s5;j!spa0(jibsrz9%c0d=e(g)v*!17y(vx0ue_3'
@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     PROJECT_NAME +'.guestbook',
     PROJECT_NAME +'.zayavka',
     PROJECT_NAME +'.pages',
+    PROJECT_NAME +'.hotel',
 )
 
 
