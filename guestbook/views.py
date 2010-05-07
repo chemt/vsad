@@ -10,7 +10,7 @@ def guestbook(request):
     added = False
 	
     if request.method == 'POST': # If the form has been submitted...
-        form=GuestbookForm(request.POST)
+        form = GuestbookForm(request.POST)
         if form.is_valid():
             form.save()
             data = form.cleaned_data
@@ -18,10 +18,10 @@ def guestbook(request):
             send_mail(u'Новий відгук на сайті', message_text, 'auto@example.com',
                         REPORT_EMAILS, fail_silently=False)
             added = True
-            form=GuestbookForm()
+            form = GuestbookForm()
 
     else:
-        form=GuestbookForm()
+        form = GuestbookForm()
 
     entries = GuestBook.objects.all().order_by("-date")
     templates = {'form': form, 'entries': entries, 'added':added }

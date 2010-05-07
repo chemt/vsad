@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy  as _
 
 class Zayavka(models.Model):
     vip_card = models.CharField(_(u"Номер VIP картки"), max_length=200, blank=False)
-    name = models.CharField(_(u"Ім’я"),max_length=200, blank=False)
+    name = models.CharField(_(u"Ім’я"), max_length=200, blank=False)
     contact = models.CharField(_(u"Контактний телефон"), max_length=200, blank=False)
     
     date = models.CharField(_(u"На коли"), max_length=200, blank=True)
@@ -20,16 +20,17 @@ class Zayavka(models.Model):
     class Meta:
         ordering = ["date", "name"]
         verbose_name = _(u"Замовлення")
-        verbose_name_plural  = _(u"Замовлення")
+        verbose_name_plural = _(u"Замовлення")
         
     class Admin(admin.ModelAdmin):
         fieldsets = (
-            (None,		{'fields': ("vip_card", "name", "contact", "date")}),
-            (_(u"Тип замовлення"),	{'fields': ("restoran", "pizza", "hotel", "sauna")}),
-            (_(u"Текст замовлення"),	{'fields': ("text",)}),
+            (None, 		{'fields': ("vip_card", "name", "contact", "date")}),
+            (_(u"Тип замовлення"), 	{'fields': ("restoran", "pizza", "hotel", "sauna")}),
+            (_(u"Текст замовлення"), 	{'fields': ("text",)}),
             )
         list_display = ("date", "name", "contact", "restoran", "pizza", "hotel", "sauna")
-        search_fields  = ("date", "name", "text", "vip_card")
+        search_fields = ("date", "name", "text", "vip_card")
 
     def __unicode__(self):
         return u"%s" % self.name
+

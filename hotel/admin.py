@@ -15,12 +15,12 @@ class PhotoInline(admin.TabularInline):
 #class PhotoInline(admin.StackedInline):
     model = NomerPhoto
     fieldsets = (
-            (None,        {'fields': ('name', 'photo')}),
+            (None, {'fields': ('name', 'photo')}),
             )
     ordering = ["name", ]
     extra = 5
 
 admin.site.register(Nomer,
-    inlines = [PhotoInline],
-    form = NomerForm,
+    inlines=[PhotoInline],
+    form=NomerForm,
 )

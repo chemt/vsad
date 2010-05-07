@@ -9,10 +9,10 @@ class PageAdmin(admin.ModelAdmin):
 #    formfield_overrides = {models.TextField: {'widget': AdminMarkItUpWidget}}
     prepopulated_fields = {"slug": ("name",)}
     fieldsets = (
-            (_(u"Сторінка"),        {'fields': ('name', 'slug', 'image')}),
-            (_(u"Текст сторінки"),        {'fields': ('text', )}),
+            (_(u"Сторінка"), {'fields': ('name', 'slug', 'image')}),
+            (_(u"Текст сторінки"), {'fields': ('text',)}),
             )
     list_display = ('name', 'slug')
-    search_fields  = ('name', 'text', 'slug')
+    search_fields = ('name', 'text', 'slug')
     
 admin.site.register(Page, PageAdmin)

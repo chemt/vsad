@@ -17,8 +17,6 @@ MANAGERS = ADMINS
 CACHE_BACKEND = 'locmem:///'
 
 
-
-
 DATABASE_ENGINE = 'sqlite3'     #postgresql_psycopg2'       # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = 'vsad.db'           # Or path to database file if using sqlite3.
 DATABASE_USER = ''           # Not used with sqlite3.
@@ -48,7 +46,7 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = 'http://staticfling.net/_django/admin_media_102/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '*xq7m@)*sdf213f2awo3#33s5;j!spa0(jibsrz9%c0d=e(g)v*!17y(vx0ue_3'
+SECRET_KEY = '*xq7m@)*bastafunky#33s5;j!spa0(jibsrz9%c0d=e(g)v*!17y(vx0ue_3'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -114,17 +112,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     
     'django_extensions',
-    #'debug_toolbar',
+    'debug_toolbar',
     'south',
     'sorl.thumbnail',
     'markitup',
 	
-    PROJECT_NAME +'.menu',
-    PROJECT_NAME +'.pizza',
-    PROJECT_NAME +'.guestbook',
-    PROJECT_NAME +'.zayavka',
-    PROJECT_NAME +'.pages',
-    PROJECT_NAME +'.hotel',
+    PROJECT_NAME + '.menu',
+    PROJECT_NAME + '.pizza',
+    PROJECT_NAME + '.guestbook',
+    PROJECT_NAME + '.zayavka',
+    PROJECT_NAME + '.pages',
+    PROJECT_NAME + '.hotel',
 )
 
 

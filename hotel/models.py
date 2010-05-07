@@ -14,11 +14,11 @@ class Nomer(models.Model):
     
     class Meta():
         verbose_name = _(u"Номер")
-        verbose_name_plural  = _(u"Номери")
+        verbose_name_plural = _(u"Номери")
         
     class Admin():
         fieldsets = (
-            (None,        {'fields': ('name', 'text')}),
+            (None, {'fields': ('name', 'text')}),
            )
 
 class NomerPhoto(models.Model):
@@ -31,6 +31,6 @@ class NomerPhoto(models.Model):
     
     class Meta():
         verbose_name = _(u"Фото номеру")
-        verbose_name_plural  = _(u"Фото номерів")
+        verbose_name_plural = _(u"Фото номерів")
 
 

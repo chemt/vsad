@@ -9,9 +9,9 @@ from settings import REPORT_EMAILS
 
 def zayavka(request):
     if request.method == 'GET':
-        form=ZayavkaForm(request.GET)
+        form = ZayavkaForm(request.GET)
     elif request.method == 'POST': # If the form has been submitted...
-        form=ZayavkaForm(request.POST)
+        form = ZayavkaForm(request.POST)
         if form.is_valid():
             form.save()
             data = form.cleaned_data
@@ -22,7 +22,7 @@ def zayavka(request):
             return render_to_response("zayavka_ok.htm", RequestContext(request))
 
     else:
-        form=ZayavkaForm()
+        form = ZayavkaForm()
 
     templates = {'form': form, }
     c = RequestContext(request, templates)

@@ -15,6 +15,6 @@ def page(request, slug):
     c = RequestContext(request, {
         'page': f,
     })
-    response = render_to_response('page.html',c)
+    response = render_to_response('page.html', c)
     populate_xheaders(request, response, Page, f.id)
     return response
