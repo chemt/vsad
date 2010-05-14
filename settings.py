@@ -116,6 +116,7 @@ INSTALLED_APPS = (
     'south',
     'sorl.thumbnail',
     'markitup',
+    'math_captcha',
 	
     PROJECT_NAME + '.menu',
     PROJECT_NAME + '.pizza',
@@ -139,8 +140,9 @@ MARKITUP_PREVIEW_FILTER = ('markdown.markdown', {'safe_mode': True})
 MARKITUP_SET = 'markitup/sets/markdown'
 MARKITUP_SKIN = 'markitup/skins/markitup'
 
-
 APPEND_SLASH = True
+
+MATH_CAPTCHA_QUESTION = u"захист"
 
 try:
     from local_settings import *

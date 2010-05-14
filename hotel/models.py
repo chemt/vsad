@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.contrib import admin
 from django.utils.translation import ugettext_lazy  as _
 from sorl.thumbnail.fields import ImageWithThumbnailsField
 from markitup.fields import MarkupField 

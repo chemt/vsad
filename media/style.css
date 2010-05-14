@@ -45,3 +45,6 @@ ul.errorlist li{margin: 0; padding: 0; list-style: none;}
 form table th,
 form table td {border-bottom: 1px dotted #ff7000;}
 input[type=text] { width: 100%; } 
+
+form#zayavka p{padding-top: 2px;}
+#id_math_captcha_field {width: 85%; float:right; margin-right: 2px;}
