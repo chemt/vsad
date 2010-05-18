@@ -19,8 +19,10 @@
 				</td> 
 				<td class='name'> {{ pizza.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 
 				<td class='col'> {{ pizza.big_amaunt }} <br> {{ pizza.small_amaunt }} </td>
-				<td class='col'> {{ pizza.big_price }} <a href="{% url pizza_add_large pizza.id %}">Замовити</a>
-					<br> {{ pizza.small_price }}  <a href="{% url pizza_add_small pizza.id %}">Замовити</a>
+				<td class='col'> 
+					{{ pizza.big_price }} {% if pizza.big_price %} <a href="{% url pizza_add_large pizza.id %}" rel="nofollow">Замовити</a> {% endif %}
+					<br>
+					{{ pizza.small_price }} {% if pizza.small_price %} <a href="{% url pizza_add_small pizza.id %}" rel="nofollow">Замовити</a>  {% endif %}
 				</td>
 			</tr>
 		{% endfor %}

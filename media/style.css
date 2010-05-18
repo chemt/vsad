@@ -38,8 +38,9 @@ h1.title,
   #cart span a.action { width: 1em; padding: 2px; font-weight: bold; text-decoration: none;
  		border: 1px solid #801001; margin-top: 1px;}
   #cart span a:hover { padding: 1px; border: 2px solid #f0b012}
-
-#zakaz { padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px solid #f0b012;}
+ #cart .last td {border-top: 1px dotted #f0b012; margin-top: 10px;}
+ 
+#zakaz { padding-bottom: 26px; margin-bottom: 10px; border-bottom: 1px solid #f0b012;}
 
 /*copyr*/
 a.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}

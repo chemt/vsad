@@ -1,4 +1,4 @@
-    <table id="cart" class="table">
+    <table id="cart" class="table" cellpadding="0" cellspacing="0">
         <tr>
             <th class="col">Назва</th>
             <th class="col">Кількість</th>
@@ -17,8 +17,7 @@
 			<td class="col">{{ item.total_price }}</td>
         </tr>
         {% endfor %}
-<!--     	<tr class="last">    	            <td></td>    	            <td class="col">Всього:</td>    				<td class="col">{{ cart.get_total }}</td>    	        </tr>    	 -->    
-
+		<tr class="last">    	            <td><a href="{% url clear_cart %}">Очистити замовлення</a></td>    	            <td class="col"></td>    				<td class="col"><a href="">Замовити</a> </td>    	</tr> 
     </table>
-	<a href="{% url clear_cart %}">Очистити замовлення</a>
+	
 	
