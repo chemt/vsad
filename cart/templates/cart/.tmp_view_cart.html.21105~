@@ -1,0 +1,8 @@
+{% extends "page.htm" %}
+{% load cart %}
+
+{% block title %} Перегляд замовлення {% endblock %}
+{% show_cart request %}
+{% block content %}
+
+{% endblock content %}

@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from django.contrib.auth.views import login, logout
+#from django.contrib.auth.views import login, logout
 
 admin.autodiscover()
 
@@ -24,6 +24,7 @@ urlpatterns = patterns('django.views.generic.simple',
     
     url(r'^book.htm$', 	include('vsad.guestbook.urls')),
     url(r'^zayavka.htm$', 	include('vsad.zayavka.urls')),
+    url(r'^zamovlennya',     include('vsad.cart.urls')),
 #    url(r'^', include('pages.urls'))
 )
 

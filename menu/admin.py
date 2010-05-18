@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from menu.models import MenuItem, MenuCategory
-from django.utils.translation import ugettext as _
+
 
 from django import forms
 
@@ -33,4 +33,5 @@ admin.site.register(MenuCategory,
     form=MenuForm,
 )
 
-#admin.site.register(MenuCategory, MenuCategory.Admin)
+from menu.models import  MenuCategoryZakaz
+admin.site.register(MenuCategoryZakaz, MenuCategoryZakaz.Admin)

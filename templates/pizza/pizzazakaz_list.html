@@ -1,0 +1,29 @@
+{% extends "page.htm" %}
+{% block title %} Замовлення Піци {% endblock title %}
+
+{% load cart %}
+
+{% block body %}
+	<div id="main">
+		<div id="zakaz">{% show_cart request %}</div>
+		
+		<h1>Піца</h1>
+		<table class='menu-table' 	cellpadding="0"	cellspacing="0">
+		{% for pizza in Pizza_list %}
+			<tr class="{% cycle 'lite' 'darck' %}"> 
+				<td class='img'> {% if pizza.image.thumbnail %}
+					<a href="{{ MEDIA_URL }}{{ item.image }}" class="zoom" >
+						<img src="{{ pizza.image.thumbnail }}" alt="{{ pizza.name }}" />
+					</a>
+					{% endif %}
+				</td> 
+				<td class='name'> {{ pizza.name }} <br> <em>{{ pizza.sklad }}</em>	</td> 
+				<td class='col'> {{ pizza.big_amaunt }} <br> {{ pizza.small_amaunt }} </td>
+				<td class='col'> {{ pizza.big_price }} <a href="{% url pizza_add_large pizza.id %}">Замовити</a>
+					<br> {{ pizza.small_price }}  <a href="{% url pizza_add_small pizza.id %}">Замовити</a>
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+{% endblock body %}

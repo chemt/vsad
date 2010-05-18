@@ -61,6 +61,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.request",
     "django.core.context_processors.media",
+    "django.core.context_processors.request",
 )
 
 
@@ -117,6 +118,7 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'markitup',
     'math_captcha',
+    'cart',
 	
     PROJECT_NAME + '.menu',
     PROJECT_NAME + '.pizza',

@@ -4,17 +4,15 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy  as _
 from sorl.thumbnail.fields import ImageWithThumbnailsField 
 
+
 class MenuCategory(models.Model):
     name = models.CharField(_(u"Назва Розділу"), max_length=200)
     ordering = models.IntegerField(_(u"Порядок сортування"), blank=True, null=True)
     
     col1 = models.CharField(_(u"Назва першої колонки"), max_length=200, blank=True)
-
     col2 = models.CharField(_(u"Назва другої колонки"), max_length=200, blank=True)
-
     col3 = models.CharField(_(u"Назва третьої колонки"), max_length=200, blank=True,
                             default=_(u"Порція"))
-
     col4 = models.CharField(_(u"Назва четвертої колонки"), max_length=200, blank=True,
                             default=_(u"Ціна"))
 
@@ -44,16 +42,16 @@ class MenuItem(models.Model):
     category = models.ForeignKey(MenuCategory, verbose_name=_(u"Розділ"))
     ordering = models.IntegerField(_(u"Порядок сортування"), blank=True, null=True)
     col1 = models.CharField(_(u"Колонка 1"), max_length=200, blank=True)
-
     col2 = models.CharField(_(u"Колонка 2"), max_length=200, blank=True)
-
     col3 = models.CharField(_(u"Колонка 3"), max_length=200, blank=True)
-
     col4 = models.CharField(_(u"Колонка 4"), max_length=200, blank=True)
-
-
+    
     def __unicode__(self):
         return self.name
+
+    def price(self):
+        return self.col4.replace(',', '.')
+
 
     class Meta:
         ordering = ['ordering', 'image', 'name', 'col1', 'col2', 'col3', 'col4', ]
@@ -69,3 +67,21 @@ class MenuItem(models.Model):
         list_display = ('name', 'category', 'col1', 'col2', 'col3', 'col4',)
         list_filter = ('category',)
         search_fields = ('name', 'col1', 'col2', 'col3', 'col4',)
+
+class MenuCategoryZakaz(models.Model):
+    category = models.ForeignKey(MenuCategory, unique=True, blank=False)
+
+    def __unicode__(self):
+        return self.category.name
+
+
+    class Meta:
+        verbose_name = _(u"Розділ меню доступний для замовлення")
+        verbose_name_plural = _(u"Розділи меню доступні для замовлення")
+
+    class Admin(admin.ModelAdmin):
+        fieldsets = (
+            (None,         {'fields': ('category',)}),
+            )
+
+    

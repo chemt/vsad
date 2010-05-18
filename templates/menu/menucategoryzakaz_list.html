@@ -1,0 +1,71 @@
+{% extends "page.htm" %}
+{% load cart %}
+{% block title %} Замовлення меню ресторану{% endblock title %}
+
+{% block extraheader %}
+{{ block.super }}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+<link rel="stylesheet" href="{{ MEDIA_URL }}fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.menu_cat div.table').hide();
+
+	$('.menu_cat h1').click(function(e){
+		$(this).next('div.table').slideToggle("slow");
+	});
+
+	$("a.zoom").fancybox({
+		'hideOnContentClick': true
+	});
+	
+});
+{% endblock extraheader %}
+
+
+{% block body %}
+	<div id="main">
+	<div id="zakaz">{% show_cart request %}</div>
+	{% for cat_zakaz in Category_list %}
+	{% with cat_zakaz.category as cat %}
+		<div class="menu_cat">
+			<h1><a href="#"> {{ cat.name }} </a></h1>
+			<div class="table">
+				<table class='menu-table' 	cellpadding="0"	cellspacing="0">
+					<tr id="table_header"> 
+						<th class='img'> 		</th> 
+						<th class='name'> Назва	</th> 
+						<th class='col'> {{ cat.col1 }} </th>
+						<th class='col'> {{ cat.col2 }} </th>
+						<th class='col'> {{ cat.col3 }} </th>
+						<th class='col'> {{ cat.col4 }} </th>
+						<th class='zamovlennya'> Замовлення </th>
+					</tr>
+				{% for item in cat.menuitem_set.all %}
+					<tr class="{% cycle 'lite' 'darck' %}"> 
+						<td class='img'> {% if item.image.thumbnail %}
+							<a href="{{ MEDIA_URL }}{{ item.image }}" class="zoom" >
+								<img src="{{ item.image.thumbnail }}" alt="{{ item.name }}" />
+							</a>
+							{% endif %}
+						</td> 
+						<td class='name'> {{ item.name }}	</td> 
+						<td class='col'> {{ item.col1 }} </td>
+						<td class='col'> {{ item.col2 }} </td>
+						<td class='col'> {{ item.col3 }} </td>
+						<td class='col'> {{ item.col4 }} </td>
+						<td id="zam" class="col">							<a href="/menu.htm/vip/add/{{ item.id }}/1">Додати в замовлення</a>
+						</td>
+					</tr>
+		
+				{% endfor %}
+				</table>
+			</div>
+		</div>
+		
+	{% endwith %}
+	{% endfor %}
+	</div>
+{% endblock body %}
+
+

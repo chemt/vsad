@@ -25,10 +25,21 @@ h1.title,
   .table .img img {border: 2px solid #f0b012;}
   .table .name {width: 447px;}
   .table .col {width: 8em; text-align: center;}
-  .table tr.lite {background-color:#8B1001;}
-  .table tr.darck {background-color:#801001;}
+
+.lite {background-color:#8B1001;}
+.darck {background-color:#801001;}
 
 .nomer-table td.img {width: 420px;}
+
+#cart { width: 100%;}
+ #cart th+th,
+ #cart th+th+th { width: 100px;}
+ #cart span { margin-left: 1em;}
+  #cart span a.action { width: 1em; padding: 2px; font-weight: bold; text-decoration: none;
+ 		border: 1px solid #801001; margin-top: 1px;}
+  #cart span a:hover { padding: 1px; border: 2px solid #f0b012}
+
+#zakaz { padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px solid #f0b012;}
 
 /*copyr*/
 a.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}

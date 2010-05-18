@@ -1,0 +1,24 @@
+    <table id="cart" class="table">
+        <tr>
+            <th class="col">Назва</th>
+            <th class="col">Кількість</th>
+            <th class="col">Ціна</th>
+        </tr>
+        {% for item in cart %}
+        <tr class="{% cycle 'lite' 'darck' %}">
+            <td>{{ item.product.name }}</td>
+            <td class="col">{{ item.quantity }} 
+			<span>
+            	<a class="action" href="{% url inc_cart_item item.id %}" title="Збільшити кількість">+</a>
+				<a class="action" href="{% url dec_cart_item item.id %}" title="Зменшити кількість">&minus;</a>
+				<a class="action" href="{% url del_cart_item item.id %}" title="Видалити пунтк">X</a>
+			</span>
+            </td>
+			<td class="col">{{ item.total_price }}</td>
+        </tr>
+        {% endfor %}
+<!--     	<tr class="last">    	            <td></td>    	            <td class="col">Всього:</td>    				<td class="col">{{ cart.get_total }}</td>    	        </tr>    	 -->    
+
+    </table>
+	<a href="{% url clear_cart %}">Очистити замовлення</a>
+	
