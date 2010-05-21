@@ -4,7 +4,6 @@
 *.pid
 *.DS_Store
 *.svn
-media/photologue/photos/
 reversion/
 build
 dist
