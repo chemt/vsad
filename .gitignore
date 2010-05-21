@@ -18,3 +18,4 @@ eggs
 parts
 bin
 /dist
+.tmp_*~

@@ -1,0 +1,11 @@
+VIP карта: {{ form.vip }}
+Телефон: {{ form.phone }}
+Ім’я: {{ form.name }}
+Повідомлення:
+{{ form.message }}
+
+Замовлення
+---------- 
+{% for item in cart %}
+> {{ item.product.name }} x {{ item.quantity }} = {{ item.total_price }}  
+{% endfor %}

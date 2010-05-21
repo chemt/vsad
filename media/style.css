@@ -40,7 +40,6 @@ h1.title,
   #cart span a:hover { padding: 1px; border: 2px solid #f0b012}
  #cart .last td {border-top: 1px dotted #f0b012; margin-top: 10px;}
  
-#zakaz { padding-bottom: 26px; margin-bottom: 10px; border-bottom: 1px solid #f0b012;}
 
 /*copyr*/
 a.copyr {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px;}
@@ -50,13 +49,19 @@ a:active.copyr {text-decoration: none; color: #000000;}
 a:hover.copyr {color: #000000}
 
 
-form{margin: 0 auto; width: 220px;}
+form{margin: 0 auto;}
+#zakaz { padding-bottom: 26px; margin-bottom: 10px; border-bottom: 1px solid #f0b012;}
+#vip-form table {margin: 0 auto;}
 
 ul.errorlist{margin: 0; padding: 0;}
-ul.errorlist li{margin: 0; padding: 0; list-style: none;}
+ul.errorlist li{margin: 0; padding: 0; list-style: none; font-weight: bold;}
 form table th,
 form table td {border-bottom: 1px dotted #ff7000;}
 input[type=text] { width: 100%; } 
+label {font-weight: normal;}
+
+div.table,
+div.table table {position: relative}
 
 form#zayavka p{padding-top: 2px;}
 #id_math_captcha_field {width: 85%; float:right; margin-right: 2px;}

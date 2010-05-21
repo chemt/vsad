@@ -1,8 +1,21 @@
 {% extends "page.htm" %}
-{% load cart %}
 
-{% block title %} Перегляд замовлення {% endblock %}
+{% block title %}<h1> Ваше замовлення прийняте </h1> {% endblock %}
 
 {% block body %}
-	{% show_cart request %}
+	    <table id="cart" class="table" cellpadding="0" cellspacing="0">
+        <tr>
+            <th class="col">Назва</th>
+            <th class="col">Кількість</th>
+            <th class="col">Ціна</th>
+        </tr>
+        {% for item in cart %}
+        <tr class="{% cycle 'lite' 'darck' %}">
+            <td>{{ item.product.name }}</td>
+            <td class="col">{{ item.quantity }} 
+            </td>
+			<td class="col">{{ item.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock body %}

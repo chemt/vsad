@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^/inc_(?P<id>\d+)$', 'cart.views.inc_cart_item', name="inc_cart_item"),
     url(r'^/dec_(?P<id>\d+)$', 'cart.views.dec_cart_item', name="dec_cart_item"),
     url(r'^/del_(?P<id>\d+)$', 'cart.views.del_cart_item', name="del_cart_item"),
+    url(r'^/checkout$', 'cart.views.checkout', name="checkout"),
 ) 

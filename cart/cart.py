@@ -25,6 +25,11 @@ class Cart:
         for item in self.cart.item_set.all():
             yield item
 
+    def checkout(self):
+        self.cart.checked_out = True
+        self.cart.save()
+
+
     def new(self, request):
         cart = models.Cart(creation_date=datetime.datetime.now())
         cart.save()
