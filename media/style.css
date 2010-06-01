@@ -61,7 +61,7 @@ input[type=text] { width: 100%; }
 label {font-weight: normal;}
 
 div.table,
-div.table table {position: relative; width: 848px;}
+div.table table {position: relative; width: 800px;}
 
 form#zayavka p{padding-top: 2px;}
 #id_math_captcha_field {width: 85%; float:right; margin-right: 2px;}

@@ -11,6 +11,7 @@ $(document).ready(function() {
 	$('.menu_cat div.table').hide();
 
 	$('.menu_cat h1').click(function(e){
+		e.preventDefault();
 		$(this).next('div.table').slideToggle("slow");
 	});
 

@@ -12,6 +12,7 @@ $(document).ready(function() {
 	$('.menu_cat div.table').hide();
 
 	$('.menu_cat h1').click(function(e){
+		e.preventDefault();
 		$(this).next('div.table').slideToggle("slow");
 	});
 
@@ -54,7 +55,8 @@ $(document).ready(function() {
 						<td class='col'> {{ item.col2 }} </td>
 						<td class='col'> {{ item.col3 }} </td>
 						<td class='col'> {{ item.col4 }} </td>
-						<td id="zam" class="col">							<a href="/menu.htm/vip/add/{{ item.id }}/1" rel="nofollow">Додати в замовлення</a>
+						<td id="zam" class="col">
+							<a href="/menu.htm/vip/add/{{ item.id }}/1" rel="nofollow">Додати в замовлення</a>
 						</td>
 					</tr>
 		
