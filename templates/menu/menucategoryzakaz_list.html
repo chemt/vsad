@@ -45,7 +45,7 @@ $(document).ready(function() {
 				{% for item in cat.menuitem_set.all %}
 					<tr class="{% cycle 'lite' 'darck' %}"> 
 						<td class='img'> {% if item.image.thumbnail %}
-							<a href="{{ MEDIA_URL }}{{ item.image }}" class="zoom" >
+							<a href="{% thumbnail item.image 800x768 %}" class="zoom" >
 								<img src="{{ item.image.thumbnail }}" alt="{{ item.name }}" />
 							</a>
 							{% endif %}
