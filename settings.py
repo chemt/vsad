@@ -7,8 +7,8 @@ PROJECT_NAME = 'vsad'
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = ("pokutnik@gmail.com",)
-REPORT_EMAILS = ("pokutnik@gmail.com", "vyshnevjsad@gmail.com")
+ADMINS = ('vyshnevyjsad@gmail.com', "pokutnik@gmail.com",)
+REPORT_EMAILS = ('vyshnevyjsad@gmail.com', "pokutnik@gmail.com",)
 EMAIL_HOST = "localhost"
 #EMAIL_PORT = 1025
 MANAGERS = ADMINS
